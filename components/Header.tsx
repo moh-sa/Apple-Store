@@ -49,21 +49,20 @@ const Header = () => {
           </Link>
         </div>
         <div className="hidden flex-1 items-center justify-center space-x-8 md:flex">
-          <Link href="/" className="header">
+          <Link href="/" className="header cursor-not-allowed">
             Product
           </Link>
-          <Link href="/" className="header">
+          <Link href="/" className="header cursor-not-allowed">
             Explore
           </Link>
-          <Link href="/" className="header">
+          <Link href="/" className="header cursor-not-allowed">
             Support
           </Link>
-          <Link href="/" className="header">
+          <Link href="/" className="header cursor-not-allowed">
             Business
           </Link>
         </div>
         <div className="flex items-center justify-center gap-x-4 md:w-1/5">
-          <MagnifyingGlassIcon className="header headerIcon" />
           <Link href="/checkout">
             <div className="relative cursor-pointer">
               {items.length > 0 && (
@@ -77,21 +76,6 @@ const Header = () => {
               <ShoppingBagIcon className="header headerIcon" />
             </div>
           </Link>
-          {session ? (
-            <Image
-              src={
-                session.user?.image ||
-                "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y"
-              }
-              alt=""
-              width={34}
-              height={34}
-              className="cursor-pointer rounded-full"
-              onClick={() => signOut()}
-            />
-          ) : (
-            <UserIcon className="header headerIcon" onClick={() => signIn()} />
-          )}
         </div>
       </header>
     </>
