@@ -124,7 +124,10 @@ const checkout = () => {
                         $283.16/mo. at 0% APR <sup className="-top-1">◊</sup>
                       </span>
                     </h4>
-                    <Button title="Check Out with Apple Card Monthly Installments" />
+                    <Button
+                      title="Check Out with Apple Card Monthly Installments"
+                      isDisabled
+                    />
                     <p className="mt-2 max-w-[240px] text-[13px]">
                       $0.00 due today, which includes applicable full-price
                       items, down payments, shipping, and taxes.
